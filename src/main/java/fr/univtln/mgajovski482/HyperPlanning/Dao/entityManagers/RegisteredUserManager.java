@@ -93,7 +93,7 @@ public class RegisteredUserManager implements EntityManager<AbstractRegUser, Str
             while (rs.next()) {
                 String password = rs.getString("password");
                 DataBaseManager.releaseConnection(connection);
-                
+
                 if(pass.equals(password)){
                     return true;
                 }
@@ -102,6 +102,20 @@ public class RegisteredUserManager implements EntityManager<AbstractRegUser, Str
             e.printStackTrace();
         }
         return false;
+    }
+
+    public void updatePassword(String mail, String newPassword){
+        try{
+            Connection connection = DataBaseManager.getConnection();
+            Statement statement = connection.createStatement();
+            statement.execute("UPDATE USERS \n" +
+                            "SET password ='" +newPassword+"'\n"+
+                            "WHERE mail = '" + mail + "'");
+            DataBaseManager.releaseConnection(connection);
+
+        }catch(SQLException e){
+            logger.warning("failed to update : \n" + e);
+        }
     }
 
     public String datetoString(Calendar date){
