@@ -1,4 +1,4 @@
-package fr.univtln.sgrassell418.hyperPlanning.dao.connectionManager;
+package fr.univtln.mgajovski482.HyperPlanning.Dao.connectionManager;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -23,17 +23,17 @@ public class DataBaseManager {
         /**
          * The Constant password.
          */
-        private static final String password = "";
+        private static final String password = "admin";
 
         /**
          * The Constant url.
          */
-        private static final String url = "jdbc:h2:tcp://localhost/~/hypertest";
+        private static final String url = "jdbc:h2:tcp://localhost/~/test";
 
         /**
          * The Constant user.
          */
-        private static final String user = "sa";
+        private static final String user = "admin";
 
         static {
             for (int i = 0; i < numberOfInitialConnections; i++) {

@@ -1,4 +1,4 @@
-package fr.univtln.sgrassell418.hyperPlanning.dao.entityManagers;
+package fr.univtln.mgajovski482.HyperPlanning.Dao.entityManagers;
 
 import java.sql.SQLException;
 import java.util.List;

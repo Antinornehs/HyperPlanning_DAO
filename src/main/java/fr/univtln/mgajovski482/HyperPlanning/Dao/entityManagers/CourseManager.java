@@ -1,11 +1,11 @@
-package fr.univtln.sgrassell418.hyperPlanning.dao.entityManagers;
+package fr.univtln.mgajovski482.HyperPlanning.Dao.entityManagers;
 
-import fr.univtln.mgajovski482.HyperPlanning.Class.Course;
+import fr.univtln.mgajovski482.HyperPlanning.Course.Course;
+import fr.univtln.mgajovski482.HyperPlanning.Dao.connectionManager.DataBaseManager;
 import fr.univtln.mgajovski482.HyperPlanning.Reservable.Room.Room;
 import fr.univtln.mgajovski482.HyperPlanning.Schedule.Schedule;
 import fr.univtln.mgajovski482.HyperPlanning.TeachingUnit;
 import fr.univtln.mgajovski482.HyperPlanning.User.RegisteredUser.Teacher;
-import fr.univtln.sgrassell418.hyperPlanning.dao.connectionManager.DataBaseManager;
 
 import java.sql.Connection;
 import java.sql.ResultSet;

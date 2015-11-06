@@ -1,9 +1,9 @@
-package fr.univtln.sgrassell418.hyperPlanning.dao.entityManagers;
+package fr.univtln.mgajovski482.HyperPlanning.Dao.entityManagers;
 
 
-import fr.univtln.mgajovski482.HyperPlanning.Class.Course;
+import fr.univtln.mgajovski482.HyperPlanning.Course.Course;
+import fr.univtln.mgajovski482.HyperPlanning.Dao.connectionManager.DataBaseManager;
 import fr.univtln.mgajovski482.HyperPlanning.GroupInFormation.GroupInFormation;
-import fr.univtln.sgrassell418.hyperPlanning.dao.connectionManager.DataBaseManager;
 
 import java.sql.Connection;
 import java.sql.ResultSet;

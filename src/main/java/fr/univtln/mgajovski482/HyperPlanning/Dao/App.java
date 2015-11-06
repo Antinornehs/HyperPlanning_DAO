@@ -1,4 +1,4 @@
-package fr.univtln.sgrassell418.hyperPlanning.dao;
+package fr.univtln.mgajovski482.HyperPlanning.Dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

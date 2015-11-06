@@ -1,4 +1,4 @@
-package fr.univtln.sgrassell418.hyperPlanning.dao;
+package fr.univtln.mgajovski482.HyperPlanning.Dao;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
@@ -29,7 +29,7 @@ public class AppTest
     }
 
     /**
-     * Rigourous Test :-)
+     * Rigourous App :-)
      */
     public void testApp()
     {
