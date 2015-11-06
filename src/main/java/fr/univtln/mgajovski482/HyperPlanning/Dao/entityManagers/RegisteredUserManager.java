@@ -2,6 +2,7 @@ package fr.univtln.mgajovski482.HyperPlanning.Dao.entityManagers;
 
 import fr.univtln.mgajovski482.HyperPlanning.Dao.connectionManager.DataBaseManager;
 import fr.univtln.mgajovski482.HyperPlanning.User.RegisteredUser.AbstractRegUser;
+import fr.univtln.mgajovski482.HyperPlanning.User.RegisteredUser.RegisteredUserLogs.RUConnectionLogs;
 
 import java.sql.*;
 import java.text.DateFormat;
@@ -79,8 +80,28 @@ public class RegisteredUserManager implements EntityManager<AbstractRegUser, Str
             DataBaseManager.releaseConnection(connection);
 
         }catch(SQLException e){
-            logger.warning("failed to delete : \n"+e);
+            logger.warning("failed to delete : \n" + e);
         }
+    }
+
+    public boolean checkConnectionLogs(String mail, String pass){
+        try {
+            Connection connection = DataBaseManager.getConnection();
+            Statement statement = connection.createStatement();
+            ResultSet rs = statement.executeQuery("SELECT * FROM USERS \n" +
+                    "WHERE mail = '" + mail + "'");
+            while (rs.next()) {
+                String password = rs.getString("password");
+                DataBaseManager.releaseConnection(connection);
+                
+                if(pass.equals(password)){
+                    return true;
+                }
+            }
+        }catch(SQLException e){
+            e.printStackTrace();
+        }
+        return false;
     }
 
     public String datetoString(Calendar date){
