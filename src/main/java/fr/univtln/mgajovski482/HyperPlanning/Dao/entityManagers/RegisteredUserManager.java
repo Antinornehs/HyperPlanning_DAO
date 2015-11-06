@@ -50,8 +50,8 @@ public class RegisteredUserManager implements EntityManager<AbstractRegUser, Str
                                             phone + "', '" +
                                             address + "', '" +
                                             pc + "', '" +
-                                            webSite + "', '" +
-                                            city + "');";
+                                            city + "', '" +
+                                            webSite + "');";
 
             statement.execute(query);
             DataBaseManager.releaseConnection(connection);
